@@ -1,0 +1,170 @@
+$light-color: #d0dcf4;
+$main-color: #b6cae9;
+$medium-color: #98a5c7;
+$dark-color: #727d9a;
+$font-name: "IBM Plex Mono", sans-serif;
+$font-color: white;
+
+%caps-heading {
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+body {
+  font-family: $font-name;
+  color: $font-color;
+  background-color: pink;
+  a {
+    color: $font-color;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+  }
+}
+
+.app-container {
+  max-width: 800px;
+  .app {
+    width: 800px;
+    height: 640px;
+    display: grid;
+    grid-template-columns: 180px auto 80px;
+    grid-template-rows: 30px auto 70px;
+    grid-template-areas:
+      "tbar-left tbar-right win-acts"
+      "sbar mbar mbar"
+      "play play play";
+  }
+}
+
+.titlebar-left {
+  grid-area: tbar-left;
+  background-color: $light-color;
+}
+
+.titlebar-right {
+  grid-area: tbar-right;
+  background-color: $main-color;
+}
+
+.window-actions {
+  grid-area: win-acts;
+  background-color: $medium-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sidebar {
+  grid-area: sbar;
+  background-color: $light-color;
+  ul {
+    line-height: 160%;
+  }
+  .top-sidebar {
+    width: 180px;
+    height: 30px;
+  }
+  .sidebar-element {
+    position: relative;
+    left: 30px;
+    top: 30px;
+    margin-bottom: 50px;
+    ul {
+      position: relative;
+      right: 40px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    h3 {
+      position: relative;
+      top: 10px;
+      @extend %caps-heading;
+    }
+  }
+}
+
+.main {
+  grid-area: mbar;
+  background-color: $main-color;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 30px 170px 50px 50px;
+
+  .top-main {
+    width: 620px;
+    height: 30px;
+    position: relative;
+    right: 50px;
+    bottom: 30px;
+  }
+}
+
+.home {
+  .name {
+    height: 150px;
+    position: relative;
+    bottom: 97px;
+    left: 30px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: -60px;
+    h1 {
+      display: inline;
+      margin-left: 20px;
+      margin: 0px;
+      font-size: 72px;
+    }
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h4 {
+    margin-top: 5px;
+    @extend %caps-heading;
+  }
+  p {
+    font-size: 14px;
+  }
+  img {
+    width: 150px;
+  }
+}
+
+.player {
+  grid-area: play;
+  background-color: $medium-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  padding: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark-color;
+  outline: 1px solid $medium-color;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}

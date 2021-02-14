@@ -14,7 +14,7 @@ function Nav(props) {
   ));
 
   return (
-    <div className="nav">
+    <div className="sidebar-element">
       <ul>{routesLink}</ul>
       <Switch>{routesList}</Switch>
     </div>

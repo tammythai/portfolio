@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.scss";
-import Titlebar from "./Titlebar";
-import Sidebar from "./Sidebar";
-import Main from "./Main";
-import Home from "./Home";
-import Browse from "./Browse";
-import Radio from "./Radio";
+import Sidebar from "./components/Sidebar";
+import Main from "./components/Main";
+import Home from "./components/Home";
+import Browse from "./components/Browse";
+import Radio from "./components/Radio";
+import Player from "./components/Player";
+import Titlebar from "./components/Titlebar";
 import { BrowserRouter as Router } from "react-router-dom";
 import Draggable from "react-draggable";
 
@@ -30,15 +31,17 @@ const navRoutes = [
 const routesList = [navRoutes];
 
 function App() {
+  const nodeRef = React.useRef(null);
   return (
-    <Draggable handle="#handle">
-      <div className="app-container">
+    <Draggable nodeRef={nodeRef} handle="#handle">
+      <div ref={nodeRef} className="app-container">
         <div className="app">
           <Titlebar />
           <Router>
             <Sidebar routes={routesList} />
             <Main routes={routesList} />
           </Router>
+          <Player />
         </div>
       </div>
     </Draggable>
