@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.scss";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
@@ -32,6 +32,23 @@ const routesList = [navRoutes];
 
 function App() {
   const nodeRef = React.useRef(null);
+
+  const [users, setUsers] = useState([]);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/greeting")
+      .then((res) => res.json())
+      .then((users) => {
+        setUsers(users);
+        console.log("hello", users);
+      })
+      .catch((err) => {
+        setHasError(true);
+        console.log(err);
+      });
+  }, []);
+
   return (
     <Draggable nodeRef={nodeRef} handle="#handle">
       <div ref={nodeRef} className="app-container">
@@ -42,6 +59,10 @@ function App() {
             <Main routes={routesList} />
           </Router>
           <Player />
+          <h1>Users</h1>
+          {hasError
+            ? "Error occurred"
+            : users.map((user) => <div key={user.id}>{user.username}</div>)}
         </div>
       </div>
     </Draggable>

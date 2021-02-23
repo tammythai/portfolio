@@ -6,8 +6,8 @@ function Titlebar() {
       <div id="handle" className="titlebar-left"></div>
       <div id="handle" className="titlebar-right"></div>
       <div className="window-actions">
-        <span class="material-icons">remove</span>
-        <span class="material-icons">clear</span>
+        <span className="material-icons">remove</span>
+        <span className="material-icons">clear</span>
       </div>
     </React.Fragment>
   );
