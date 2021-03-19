@@ -36,21 +36,6 @@ app
   .use("/api/artists", artistsRouter)
   .use("/api/albums", albumsRouter);
 
-app.get("/api/greeting", (req, res) => {
-  const name = req.query.name || "World";
-  res.setHeader("Content-Type", "application/json");
-  res.json([
-    {
-      id: 1,
-      username: "samsepi0l",
-    },
-    {
-      id: 2,
-      username: "D0loresH4ze",
-    },
-  ]);
+app.listen(3001, () => {
+  console.log("Express server is running on localhost:3001");
 });
-
-app.listen(3001, () =>
-  console.log("Express server is running on localhost:3001")
-);

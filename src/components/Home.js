@@ -12,8 +12,8 @@ function Home() {
       </span>
       <h2>Bio</h2>
       <p>
-        Hi, I'm an aspiring full-stack developer who wants to create simple,
-        beautiful, and accessible applications that leave an impact.
+        Hi, I'm an aspiring developer who wants to create simple, beautiful, and
+        accessible applications that leave an impact.
       </p>
 
       <h2>More</h2>

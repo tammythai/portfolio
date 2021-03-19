@@ -3,9 +3,16 @@ const router = express.Router();
 const spotifyApi = require("../app");
 
 router.get("/", function (req, res) {
-  var code = req.query.code || null;
-  var state = req.query.state || null;
-  var error = req.query.error || null;
+  const code = req.query.code || null;
+  const state = req.query.state || null;
+  const error = req.query.error || null;
+
+  const loginResponse = (loginStatus) => {
+    return {
+      code: loginStatus ? 200 : 401,
+      message: loginStatus ? "Login was successful." : "Login failed.",
+    };
+  };
 
   if (error) {
     console.error("Callback Error:", error);
@@ -29,7 +36,9 @@ router.get("/", function (req, res) {
       console.log(
         `Sucessfully retreived access token. Expires in ${expires_in} s.`
       );
-      res.send("Success! You can now close the window.");
+      //res.send("Success! You can now close the window.");
+      // res.send(loginResponse(true));
+      res.redirect("http://localhost:3000/?code=200");
 
       setInterval(async () => {
         const data = await spotifyApi.refreshAccessToken();
@@ -42,7 +51,8 @@ router.get("/", function (req, res) {
     })
     .catch((error) => {
       console.error("Error getting Tokens:", error);
-      res.send(`Error getting Tokens: ${error}`);
+      //res.send(`Error getting Tokens: ${error}`);
+      res.send(loginResponse(false));
     });
 });
 

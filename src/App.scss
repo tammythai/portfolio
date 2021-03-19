@@ -5,10 +5,23 @@ $dark-color: #727d9a;
 $font-name: "IBM Plex Mono", sans-serif;
 $font-color: white;
 
-%caps-heading {
-  text-transform: uppercase;
-  font-weight: lighter;
-  font-size: 14px;
+$sidebar-fontsize: 16px;
+$caps-fontsize: 14px;
+
+$page-header-fontsize: 16px;
+$page-content-fontsize: 14px;
+
+$playlist-header-fontsize: 14px;
+$playlist-content-fontsize: 12px;
+
+.page-title {
+  font-size: 24px;
+  margin: 0px;
+}
+
+.page-description {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 body {
@@ -78,13 +91,13 @@ body {
     ul {
       position: relative;
       right: 40px;
-      font-size: 16px;
+      font-size: $sidebar-fontsize;
       font-weight: 600;
     }
     h3 {
       position: relative;
       top: 10px;
-      @extend %caps-heading;
+      @extend %caps-font;
     }
   }
 }
@@ -94,7 +107,7 @@ body {
   background-color: $main-color;
   overflow-y: scroll;
   overflow-x: hidden;
-  padding: 30px 170px 50px 50px;
+  padding: 30px 90px 50px 50px;
 
   .top-main {
     width: 620px;
@@ -123,17 +136,45 @@ body {
     }
   }
   h2 {
-    font-size: 18px;
+    font-size: $page-header-fontsize;
   }
   h4 {
     margin-top: 5px;
-    @extend %caps-heading;
+    @extend %caps-font;
   }
   p {
-    font-size: 14px;
+    font-size: $page-content-fontsize;
   }
   img {
     width: 150px;
+  }
+}
+
+.list-display {
+  .list-display-track {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    font-size: $playlist-content-fontsize;
+    .track-title {
+      width: 100px;
+    }
+    .track-artist {
+      width: 100px;
+    }
+    .track-album {
+      width: 100px;
+    }
+    .track-date {
+      width: 72px;
+    }
+    .track-time {
+      width: 29px;
+    }
+  }
+  .list-header {
+    @extend %caps-font;
   }
 }
 
@@ -167,4 +208,10 @@ body {
 }
 .material-icons.md-48 {
   font-size: 48px;
+}
+
+%caps-font {
+  text-transform: uppercase;
+  font-size: $caps-fontsize;
+  font-weight: lighter;
 }

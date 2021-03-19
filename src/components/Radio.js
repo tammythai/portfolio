@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { getRecentTracks } from "../utilities/api";
+import ListDisplay from "./ListDisplay";
 
 function Radio() {
   const [tracks, setTracks] = useState([]);
@@ -7,7 +9,28 @@ function Radio() {
   // you can extract out the function to an api functions file
   // have it so that useEffect is only called when tracks changes
 
-  return <div>This be the radio yeet</div>;
+  useEffect(() => {
+    // const fetchTracks = async () => {
+    //   const data = await getRecentTracks();
+    //   console.log(data);
+    //   setTracks(data);
+    // };
+    // fetchTracks();
+
+    getRecentTracks().then((tracks) => {
+      setTracks(tracks);
+    });
+  }, []);
+
+  return (
+    <div>
+      <h1 className="page-title">Radio</h1>
+      <h2 className="page-description">
+        Listen to my 10 most recently listened to tracks!
+      </h2>
+      <ListDisplay tracks={tracks} />
+    </div>
+  );
 }
 
 export default Radio;
