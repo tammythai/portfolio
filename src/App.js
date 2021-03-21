@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
@@ -7,10 +8,11 @@ import Browse from "./components/Browse";
 import Radio from "./components/Radio";
 import Player from "./components/Player";
 import Titlebar from "./components/Titlebar";
-import { BrowserRouter as Router } from "react-router-dom";
 import Draggable from "react-draggable";
 import LikedSongs from "./components/LikedSongs";
-//import { setConstantValue } from "typescript";
+import Artists from "./components/Artists";
+import Albums from "./components/Albums";
+import Playlist from "./components/Playlist";
 
 const navRoutes = [
   {
@@ -39,6 +41,30 @@ const libraryRoutes = [
   {
     path: "/artists",
     title: "Artists",
+    main: () => <Artists />,
+  },
+  {
+    path: "/albums",
+    title: "Albums",
+    main: () => <Albums />,
+  },
+];
+
+const playlistsRoutes = [
+  {
+    path: "/playlist/to-learn",
+    title: "To learn",
+    main: () => <Playlist playlistId="7AhOv6H9IkZqAR5wRYpNxR" />,
+  },
+  {
+    path: "/playlist/feb-21",
+    title: "feb '21",
+    main: () => <Playlist playlistId="2FkEoyPkOGFEbiIwUW7bz7" />,
+  },
+  {
+    path: "/playlist/top-songs-2020",
+    title: "Your Top Songs 2020",
+    main: () => <Playlist playlistId="37i9dQZF1EMh8ohlGzGpOf" />,
   },
 ];
 
@@ -47,7 +73,7 @@ const libraryRoutes = [
 // it doesn't die
 // also need to have a fallback if im not logged in (aka no token available)
 
-const routesList = [navRoutes];
+const routesList = [navRoutes, libraryRoutes, playlistsRoutes];
 
 function App() {
   const nodeRef = React.useRef(null);

@@ -12,15 +12,15 @@ function Home() {
       </span>
       <h2>Bio</h2>
       <p>
-        Hi, I'm an aspiring developer who wants to create simple, beautiful, and
-        accessible applications that leave an impact.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum
+        erat in volutpat pellentesque. Duis suscipit, tellus eget egestas
+        gravida.
       </p>
 
       <h2>More</h2>
       <p>
-        I'm a recent graduate from University of California, Irvine who enjoys
-        listening and sharing music, learning guitar, cooking food for others,
-        running, arts/crafts, and exploring mental health and self-healing.
+        Nunc feugiat ultrices aliquam. Sed sed porta ante. Vestibulum purus
+        urna, ultrices at ipsum ut, feugiat aliquam quam. Sed quis aliquam est.
       </p>
 
       <h2>Info</h2>

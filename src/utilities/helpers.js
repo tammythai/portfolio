@@ -16,3 +16,26 @@ export const displayArtists = (artists) => {
   artists.forEach((artist) => artistList.push(artist.name));
   return artistList.join(", ");
 };
+
+export const mapItemsToTracks = (items) => {
+  return items.map((item) => ({
+    title: item.track.name,
+    artists: item.track.artists.map((artist) => ({
+      name: artist.name,
+      id: artist.id,
+    })),
+    album: {
+      name: item.track.album.name,
+      id: item.track.album.id,
+      images: item.track.album.images.map((image) => ({
+        height: image.height,
+        width: image.width,
+        url: image.url,
+      })),
+    },
+    date_added: item.played_at || item.added_at,
+    duration: item.track.duration_ms,
+  }));
+};
+
+

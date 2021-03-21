@@ -1,16 +1,14 @@
 import React from "react";
 import Nav from "./Nav";
-import Library from "./Library";
-import Playlists from "./Playlists";
 
 function Sidebar(props) {
-  const [navRoutes] = props.routes;
+  const [navRoutes, libraryRoutes, playlistsRoutes] = props.routes;
 
   return (
     <div className="sidebar">
       <Nav routes={navRoutes} />
-      <Library />
-      <Playlists />
+      <Nav routes={libraryRoutes} name="Library" />
+      <Nav routes={playlistsRoutes} name="Playlists" />
     </div>
   );
 }

@@ -1,0 +1,361 @@
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/21tDFddcOFDYmiobTcls2O"
+      },
+      "followers": {
+        "href": null,
+        "total": 237882
+      },
+      "genres": ["kawaii future bass", "lo-fi beats"],
+      "href": "https://api.spotify.com/v1/artists/21tDFddcOFDYmiobTcls2O",
+      "id": "21tDFddcOFDYmiobTcls2O",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/a80e0549d4f5db7ea1f8fdcadfd11bb9d3baf0c6",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/1d6488f13637acd7db689d3d09dda7bae83b960f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/9f708e271d8aa32ea043e53281c27681c4273bf6",
+          "width": 160
+        }
+      ],
+      "name": "In Love With a Ghost",
+      "popularity": 63,
+      "type": "artist",
+      "uri": "spotify:artist:21tDFddcOFDYmiobTcls2O"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0Vw76uk7P8yVtTClWyOhac"
+      },
+      "followers": {
+        "href": null,
+        "total": 1142277
+      },
+      "genres": ["chill r&b", "uk pop"],
+      "href": "https://api.spotify.com/v1/artists/0Vw76uk7P8yVtTClWyOhac",
+      "id": "0Vw76uk7P8yVtTClWyOhac",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/67f383563a69822108155fd0b80b8b0a12f0869f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/1dcad851159ec455f6390879b437435934bcb557",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/8b9e5d9441a0208eca61b6a1f7fba5e390dd835d",
+          "width": 160
+        }
+      ],
+      "name": "HONNE",
+      "popularity": 72,
+      "type": "artist",
+      "uri": "spotify:artist:0Vw76uk7P8yVtTClWyOhac"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3jOstUTkEu2JkjvRdBA5Gu"
+      },
+      "followers": {
+        "href": null,
+        "total": 2254979
+      },
+      "genres": [
+        "alternative rock",
+        "modern power pop",
+        "modern rock",
+        "permanent wave",
+        "pop rock",
+        "rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3jOstUTkEu2JkjvRdBA5Gu",
+      "id": "3jOstUTkEu2JkjvRdBA5Gu",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/64abfc3e7f2d615fc06fa76b8b5436e22bf72989",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/14d695a53596bcdeed6b19ea343abef95732925a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/db5d7bb3f1b1809969641955697595a7ef42c18c",
+          "width": 160
+        }
+      ],
+      "name": "Weezer",
+      "popularity": 78,
+      "type": "artist",
+      "uri": "spotify:artist:3jOstUTkEu2JkjvRdBA5Gu"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3gIRvgZssIb9aiirIg0nI3"
+      },
+      "followers": {
+        "href": null,
+        "total": 1508439
+      },
+      "genres": ["alt z", "electropop", "pop"],
+      "href": "https://api.spotify.com/v1/artists/3gIRvgZssIb9aiirIg0nI3",
+      "id": "3gIRvgZssIb9aiirIg0nI3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/5fead6314a75a470db909bdb78ed4f135da39d1a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/782a1117e1ad24f3028b96d30b63dfaf710697c4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/2f11b50c3288556df7e9d991402b80ba079c85f1",
+          "width": 160
+        }
+      ],
+      "name": "Jeremy Zucker",
+      "popularity": 83,
+      "type": "artist",
+      "uri": "spotify:artist:3gIRvgZssIb9aiirIg0nI3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5JZ7CnR6gTvEMKX4g70Amv"
+      },
+      "followers": {
+        "href": null,
+        "total": 4078340
+      },
+      "genres": ["electropop", "pop", "post-teen pop"],
+      "href": "https://api.spotify.com/v1/artists/5JZ7CnR6gTvEMKX4g70Amv",
+      "id": "5JZ7CnR6gTvEMKX4g70Amv",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/a9056e58b858d3bd3354be7f0c4192c6b4933fa8",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/a2db724a7e95a72a8e73554d8db08ef9392d5b71",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/fdc049a5c0ca5d077d7fc729cb80dc5bf20f908a",
+          "width": 160
+        }
+      ],
+      "name": "Lauv",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:5JZ7CnR6gTvEMKX4g70Amv"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4xnihxcoXWK3UqryOSnbw5"
+      },
+      "followers": {
+        "href": null,
+        "total": 796772
+      },
+      "genres": [
+        "alt z",
+        "electropop",
+        "indie cafe pop",
+        "pop",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4xnihxcoXWK3UqryOSnbw5",
+      "id": "4xnihxcoXWK3UqryOSnbw5",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/cbd5d5ec6f309f2288caea62b7d14d3f2711c4c8",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/8f352ea89f990827004ea14751c3f45b4239c1b3",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/4188db39b00ec5d29b3a1f7dd928921078e254ee",
+          "width": 160
+        }
+      ],
+      "name": "Sasha Sloan",
+      "popularity": 78,
+      "type": "artist",
+      "uri": "spotify:artist:4xnihxcoXWK3UqryOSnbw5"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+      },
+      "followers": {
+        "href": null,
+        "total": 37852182
+      },
+      "genres": ["dance pop", "pop", "pop dance"],
+      "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+      "id": "06HL4z0CvFAxyc27GXpf02",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/8389f45cac7a58e3ab67a3bdeb5b4a0f9d8f7919",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ca417f738fca37ef08447d45f9c32e2650f48a86",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/02e96fdf26f6a3b1d435f163831ea50f7d2abb55",
+          "width": 160
+        }
+      ],
+      "name": "Taylor Swift",
+      "popularity": 98,
+      "type": "artist",
+      "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/26VFTg2z8YR0cCuwLzESi2"
+      },
+      "followers": {
+        "href": null,
+        "total": 14298320
+      },
+      "genres": [
+        "dance pop",
+        "electropop",
+        "etherpop",
+        "indie poptimism",
+        "pop",
+        "pop dance",
+        "post-teen pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/26VFTg2z8YR0cCuwLzESi2",
+      "id": "26VFTg2z8YR0cCuwLzESi2",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/1ccc88afcd13131dc35a1bd028922dbc748a55fb",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/8b56979f115e855301c33828bcad2c57280adbab",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ac0a244c45f25b7d177bbe629c30565fe0768f14",
+          "width": 160
+        }
+      ],
+      "name": "Halsey",
+      "popularity": 90,
+      "type": "artist",
+      "uri": "spotify:artist:26VFTg2z8YR0cCuwLzESi2"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/73eAAfRkS2Vi4hx68oTJJE"
+      },
+      "followers": {
+        "href": null,
+        "total": 95342
+      },
+      "genres": ["alt z", "australian pop", "electropop", "pop"],
+      "href": "https://api.spotify.com/v1/artists/73eAAfRkS2Vi4hx68oTJJE",
+      "id": "73eAAfRkS2Vi4hx68oTJJE",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/8153f9117ae181af807fc4fa9b00fd4a5e2e1d08",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/405df5d9b2b756077fa8fef9ff62aacdb7eb143e",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/eb6429feeed52724ab19ef355dddd4fee47ceb7c",
+          "width": 160
+        }
+      ],
+      "name": "John K",
+      "popularity": 72,
+      "type": "artist",
+      "uri": "spotify:artist:73eAAfRkS2Vi4hx68oTJJE"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1W7FNibLa0O0b572tB2w7t"
+      },
+      "followers": {
+        "href": null,
+        "total": 633706
+      },
+      "genres": ["bedroom soul", "pop"],
+      "href": "https://api.spotify.com/v1/artists/1W7FNibLa0O0b572tB2w7t",
+      "id": "1W7FNibLa0O0b572tB2w7t",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/c9d0a7271b1906ff47eba7a38dbd91114f18e2ae",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/baea63e681e4c0b5b0db5a7a902c2c46bd573e89",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/b9006fdddd1537877c3d104c525edbb5a608f58d",
+          "width": 160
+        }
+      ],
+      "name": "Pink Sweat$",
+      "popularity": 81,
+      "type": "artist",
+      "uri": "spotify:artist:1W7FNibLa0O0b572tB2w7t"
+    }
+  ],
+  "total": 50,
+  "limit": 10,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=0",
+  "previous": null,
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=10&offset=10"
+}

@@ -3,12 +3,14 @@ import { msToTime, datetimeToDate, displayArtists } from "../utilities/helpers";
 
 function ListDisplay(props) {
   const tracks = props.tracks;
+
+  // make sure to have a check if it's undefined
   const displayTracks = tracks.map((track, index) => (
     <div className="list-display-track" key={index}>
       <span className="track-title">{track.title}</span>
       <span className="track-artist">{displayArtists(track.artists)}</span>
       <span className="track-album">{track.album.name}</span>
-      <span>{datetimeToDate(track.date_played)}</span>
+      <span>{datetimeToDate(track.date_added)}</span>
       <span>{msToTime(track.duration)}</span>
     </div>
   ));

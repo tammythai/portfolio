@@ -26,7 +26,7 @@ function Radio() {
     <div>
       <h1 className="page-title">Radio</h1>
       <h2 className="page-description">
-        Listen to my 10 most recently listened to tracks!
+        My 10 most recently listened to tracks
       </h2>
       <ListDisplay tracks={tracks} />
     </div>

@@ -24,6 +24,12 @@ $playlist-content-fontsize: 12px;
   font-weight: 400;
 }
 
+.caps-heading {
+  text-transform: uppercase;
+  font-size: $caps-fontsize;
+  font-weight: lighter;
+}
+
 body {
   font-family: $font-name;
   color: $font-color;
@@ -175,6 +181,23 @@ body {
   }
   .list-header {
     @extend %caps-font;
+  }
+}
+
+.collection-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .collection-item {
+    width: 150px;
+    height: 150px;
+  }
+  .collection-item:hover {
+    opacity: 0.6;
+  }
+  .collection-item-desc {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 }
 
