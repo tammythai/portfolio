@@ -20,6 +20,7 @@ export const displayArtists = (artists) => {
 export const mapItemsToTracks = (items) => {
   return items.map((item) => ({
     title: item.track.name,
+    id: item.track.id,
     artists: item.track.artists.map((artist) => ({
       name: artist.name,
       id: artist.id,
@@ -37,5 +38,3 @@ export const mapItemsToTracks = (items) => {
     duration: item.track.duration_ms,
   }));
 };
-
-

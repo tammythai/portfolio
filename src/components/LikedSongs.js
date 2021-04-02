@@ -6,10 +6,17 @@ function LikedSongs() {
   const [tracks, setTracks] = useState([]);
 
   useEffect(() => {
+    let mounted = true;
     getLikedTracks().then((tracks) => {
-      setTracks(tracks);
+      if (mounted) {
+        setTracks(tracks);
+        console.log("r u srs");
+      }
     });
-  }, []);
+    return () => {
+      mounted = false;
+    };
+  }, [JSON.stringify(tracks)]);
 
   return (
     <div>

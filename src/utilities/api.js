@@ -1,4 +1,3 @@
-import { isEmptyStatement } from "typescript";
 import { mapItemsToTracks } from "./helpers";
 
 export const getRecentTracks = async () => {
@@ -81,4 +80,26 @@ export const getTopArtists = async () => {
     })
     .catch((err) => console.log(err));
   return artists;
+};
+
+export const getPlaylist = async (playlistId) => {
+  const playlist = await fetch("/api/playlists/" + playlistId)
+    .then((res) => res.json())
+    .then((data) => {
+      return {
+        playlist: {
+          name: data.name,
+          id: data.id,
+          description: data.description,
+          images: data.images.map((image) => ({
+            height: image.height,
+            width: image.width,
+            url: image.url,
+          })),
+        },
+        tracks: mapItemsToTracks(data.tracks.items),
+      };
+    })
+    .catch((err) => console.log(err));
+  return playlist;
 };

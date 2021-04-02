@@ -17,8 +17,9 @@ const loginRouter = require("./routes/login");
 const callbackRouter = require("./routes/callback");
 const radioRouter = require("./routes/radio");
 const likedSongsRouter = require("./routes/liked");
-const albumsRouter = require("./routes/albums");
 const artistsRouter = require("./routes/artists");
+const albumsRouter = require("./routes/albums");
+const playlistsRouter = require("./routes/playlists");
 
 const app = express();
 app
@@ -33,8 +34,9 @@ app
   .use("/callback", callbackRouter)
   .use("/api/radio", radioRouter)
   .use("/api/liked-songs", likedSongsRouter)
+  .use("/api/albums", albumsRouter)
   .use("/api/artists", artistsRouter)
-  .use("/api/albums", albumsRouter);
+  .use("/api/playlists", playlistsRouter);
 
 app.listen(3001, () => {
   console.log("Express server is running on localhost:3001");
