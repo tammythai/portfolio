@@ -13,6 +13,7 @@ function Albums() {
 
   return (
     <div>
+      <h1>Albums</h1>
       <CollectionDisplay collection={albums} collectionType="albums" />
     </div>
   );

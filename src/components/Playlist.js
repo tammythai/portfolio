@@ -9,18 +9,22 @@ function Playlist(props) {
   const [tracks, setTracks] = useState([]);
 
   useEffect(() => {
-    getPlaylist(playlistId).then((playlist) => {
-      setPlaylist(playlist.playlist);
-      setTracks(playlist.tracks);
-      console.log(playlist.playlist);
-      console.log(playlist.playlist.images);
+    let mounted = true;
+    getPlaylist(playlistId).then((playlistData) => {
+      if (mounted) {
+        setPlaylist(playlistData.playlist);
+        setTracks(playlistData.tracks);
+        console.log(playlistData.playlist);
+      }
     });
-  }, [playlist, tracks]);
+    return () => {
+      mounted = false;
+    };
+  }, [playlistId]);
 
   return (
     <div>
       <PlaylistHeader playlistInfo={playlist} />
-
       <ListDisplay tracks={tracks} />
     </div>
   );

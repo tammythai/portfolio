@@ -10,7 +10,6 @@ function LikedSongs() {
     getLikedTracks().then((tracks) => {
       if (mounted) {
         setTracks(tracks);
-        console.log("r u srs");
       }
     });
     return () => {

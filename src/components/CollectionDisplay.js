@@ -50,9 +50,18 @@ function CollectionDisplay(props) {
           height={item.album.images[0].height}
         />
         <div className="collection-item-desc">
-          <div className="collection-item-title">{item.album.name}</div>
+          <a
+            className="collection-item-title"
+            href={"http://open.spotify.com/album" + item.album.id}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {item.album.name}
+          </a>
           {item.artists.map((artist, index) => (
-            <div key={index}>{artist.name}</div>
+            <a key={index} href={"http://open.spotify.com/artist/" + artist.id}>
+              {artist.name}
+            </a>
           ))}
         </div>
       </div>
@@ -68,7 +77,14 @@ function CollectionDisplay(props) {
           height={item.images[0].height}
         />
         <div className="collection-item-desc">
-          <div className="collection-item-title">{item.name}</div>
+          <a
+            className="collection-item-title"
+            href={"http://open.spotify.com/artist/" + item.id}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {item.name}
+          </a>
         </div>
       </div>
     ));

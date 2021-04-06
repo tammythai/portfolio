@@ -1,28 +1,13 @@
-import { mapItemsToTracks } from "./helpers";
+import {
+  mapItemsToTracks,
+  getTotalSongCount,
+  getTotalSongDuration,
+} from "./helpers";
 
 export const getRecentTracks = async () => {
   const tracks = await fetch("/api/radio")
     .then((res) => res.json())
     .then((data) => {
-      //console.log(data.items);
-      // return data.items.map((item) => ({
-      //   title: item.track.name,
-      //   artists: item.track.artists.map((artist) => ({
-      //     name: artist.name,
-      //     id: artist.id,
-      //   })),
-      //   album: {
-      //     name: item.track.album.name,
-      //     id: item.track.album.id,
-      //     images: item.track.album.images.map((image) => ({
-      //       height: image.height,
-      //       width: image.width,
-      //       url: image.url,
-      //     })),
-      //   },
-      //   date_added: item.played_at || item.added_at,
-      //   duration: item.track.duration_ms,
-      // }));
       return mapItemsToTracks(data.items);
     })
     .catch((err) => console.log(err));
@@ -96,6 +81,8 @@ export const getPlaylist = async (playlistId) => {
             width: image.width,
             url: image.url,
           })),
+          duration: getTotalSongDuration(data.tracks.items),
+          song_count: getTotalSongCount(data.tracks.items),
         },
         tracks: mapItemsToTracks(data.tracks.items),
       };

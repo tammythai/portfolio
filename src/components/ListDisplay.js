@@ -1,5 +1,10 @@
 import React from "react";
-import { msToTime, datetimeToDate, displayArtists } from "../utilities/helpers";
+import {
+  msToTime,
+  datetimeToDate,
+  formatTimeToClock,
+  displayArtists,
+} from "../utilities/helpers";
 
 function ListDisplay(props) {
   const tracks = props.tracks;
@@ -7,11 +12,26 @@ function ListDisplay(props) {
   // make sure to have a check if it's undefined
   const displayTracks = tracks?.map((track, index) => (
     <div className="list-display-track" key={index}>
-      <span className="track-title">{track.title}</span>
+      <a
+        href={"https://open.spotify.com/track/" + track.id}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="track-title"
+      >
+        {track.title}
+      </a>
       <span className="track-artist">{displayArtists(track.artists)}</span>
-      <span className="track-album">{track.album.name}</span>
+      <a
+        href={"https://open.spotify.com/album/" + track.album.id}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="track-album"
+      >
+        {track.album.name}
+      </a>
       <span>{datetimeToDate(track.date_added)}</span>
-      <span>{msToTime(track.duration)}</span>
+      {/* <span>{msToTime(track.duration)}</span> */}
+      <span>{formatTimeToClock(msToTime(track.duration))}</span>
     </div>
   ));
 

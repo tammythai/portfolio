@@ -17,6 +17,24 @@ $playlist-content-fontsize: 12px;
 .playlist-header {
   display: flex;
   flex-direction: row;
+  padding-bottom: 10px;
+  .playlist-image {
+    width: 150px;
+    height: 150px;
+  }
+  .playlist-info {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .playlist-title {
+      font-size: 24px;
+      margin: 25px 0px 0px 0px;
+    }
+    .playlist-length {
+      margin-top: 10px;
+    }
+  }
 }
 
 .page-title {
@@ -42,6 +60,9 @@ body {
   a {
     color: $font-color;
     text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 
   ul {

@@ -1,19 +1,36 @@
 import React from "react";
+import { msToTime, formatTimeToText } from "../utilities/helpers";
 
 function PlaylistHeader(props) {
-  const { name, id, description, images } = props.playlistInfo;
-  console.log(images);
-
-  //   const playlistName = props.playlistName;
-  //   const playlistImage = props.playlistImage;
-  //   const playlistDescription = props.playlistDescription;
+  const {
+    name,
+    id,
+    description,
+    images,
+    duration,
+    song_count,
+  } = props.playlistInfo;
 
   return (
     <div className="playlist-header">
-      <img src={null} alt={name} />
-      <div>
-        <div className="page-title">{name}</div>
+      <img
+        className="playlist-image"
+        src={images ? images[0].url : null}
+        alt={name}
+      />
+      <div className="playlist-info">
+        <a
+          className="playlist-title"
+          href={"http://open.spotify.com/playlist/" + id}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {name}
+        </a>
         <div className="page-description">{description}</div>
+        <div className="playlist-length">
+          {song_count} songs, {formatTimeToText(msToTime(duration))}
+        </div>
       </div>
     </div>
   );
