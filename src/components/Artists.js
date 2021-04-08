@@ -12,8 +12,11 @@ function Artists() {
   }, [JSON.stringify(artists)]);
   return (
     <div>
-      <h1 className="player-title">Artists</h1>
-      <CollectionDisplay collection={artists} collectionType="artists" />
+      <CollectionDisplay
+        title="Artists"
+        collection={artists}
+        collectionType="artists"
+      />
     </div>
   );
 }

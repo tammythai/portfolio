@@ -13,8 +13,11 @@ function Albums() {
 
   return (
     <div>
-      <h1 className="player-title">Albums</h1>
-      <CollectionDisplay collection={albums} collectionType="albums" />
+      <CollectionDisplay
+        title="Albums"
+        collection={albums}
+        collectionType="albums"
+      />
     </div>
   );
 }

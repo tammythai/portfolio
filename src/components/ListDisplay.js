@@ -11,7 +11,14 @@ function ListDisplay(props) {
 
   // make sure to have a check if it's undefined
   const displayTracks = tracks?.map((track, index) => (
-    <div className="list-display-track player-content" key={index}>
+    <div
+      className="list-display-track player-content"
+      key={index}
+      onClick={() => console.log(tracks[index])}
+    >
+      <span className="material-icons list-display-play">
+        play_circle_outline
+      </span>
       <a
         href={"https://open.spotify.com/track/" + track.id}
         target="_blank"
@@ -30,13 +37,15 @@ function ListDisplay(props) {
         {track.album.name}
       </a>
       <span>{datetimeToDate(track.date_added)}</span>
-      {/* <span>{msToTime(track.duration)}</span> */}
       <span>{formatTimeToClock(msToTime(track.duration))}</span>
     </div>
   ));
 
   const listDisplayHeader = (
     <div className="list-display-track caps-heading">
+      <span className="material-icons list-display-play">
+        play_circle_outline
+      </span>
       <span className="track-title">Title</span>
       <span className="track-artist">Artist</span>
       <span className="track-album">Album</span>

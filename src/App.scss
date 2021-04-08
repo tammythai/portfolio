@@ -2,6 +2,7 @@
 
 $light-color: #d0dcf4;
 $main-color: #b6cae9;
+$main-highlight-color: #bdcfeb;
 $medium-color: #98a5c7;
 $dark-color: #727d9a;
 $font-name: "IBM Plex Mono", sans-serif;
@@ -172,9 +173,10 @@ body {
   .list-display-track {
     display: flex;
     flex-direction: row;
+    position: relative;
     padding-bottom: 20px;
+    left: -30px;
     justify-content: space-between;
-
     .track-title {
       width: 100px;
     }
@@ -188,18 +190,44 @@ body {
       width: 72px;
     }
     .track-time {
-      width: 29px;
+      width: 30px;
     }
+    .list-display-play {
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+  .list-display-track:not(:first-child):hover .list-display-play {
+    opacity: 1;
+  }
+  .list-display-track:not(:first-child):hover {
+    background-color: $main-highlight-color;
   }
 }
 
 .playlist-header {
   display: flex;
   flex-direction: row;
-  padding-bottom: 10px;
-  .playlist-image {
-    width: 150px;
-    height: 150px;
+  padding-bottom: 15px;
+  .playlist-item {
+    position: relative;
+    .playlist-play {
+      position: absolute;
+      left: 60px;
+      top: 60px;
+      display: none;
+    }
+    .playlist-image {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .playlist-item:hover .playlist-play {
+    display: block;
+  }
+  .playlist-item:hover {
+    opacity: 0.6;
   }
   .playlist-info {
     margin-left: 10px;
@@ -212,20 +240,40 @@ body {
   }
 }
 
+.collection-display-title {
+  padding-bottom: 10px;
+}
 .collection-display {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   .collection-item {
-    width: 150px;
-    height: 150px;
+    position: relative;
+    .collection-play {
+      position: absolute;
+      left: 60px;
+      top: 60px;
+      display: none;
+    }
+    .collection-image {
+      width: 150px;
+      height: 150px;
+    }
   }
   .collection-item:hover {
     opacity: 0.6;
+  }
+  .collection-item:hover .collection-play {
+    display: block;
   }
   .collection-item-desc {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 10px;
+    .collection-item-title {
+      font-weight: 600;
+      padding-bottom: 5px;
+    }
   }
 }
 

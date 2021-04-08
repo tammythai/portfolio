@@ -1,6 +1,7 @@
 import React from "react";
 
 function CollectionDisplay(props) {
+  const title = props.title;
   const collection = props.collection;
   const collectionType = props.collectionType;
   let displayCollection = null;
@@ -8,13 +9,21 @@ function CollectionDisplay(props) {
   if (collectionType === "albums") {
     displayCollection = collection.map((item, index) => (
       <div key={index}>
-        <img
+        <div
           className="collection-item"
-          src={item.album.images[0].url}
-          alt={item.album.name}
-          width={item.album.images[0].width}
-          height={item.album.images[0].height}
-        />
+          onClick={() => console.log(collection[index])}
+        >
+          <img
+            className="collection-image"
+            src={item.album.images[0].url}
+            alt={item.album.name}
+            width={item.album.images[0].width}
+            height={item.album.images[0].height}
+          />
+          <span className="material-icons md-36 collection-play">
+            play_circle
+          </span>
+        </div>
         <div className="collection-item-desc player-description">
           <a
             className="collection-item-title"
@@ -35,13 +44,21 @@ function CollectionDisplay(props) {
   } else if (collectionType === "artists") {
     displayCollection = collection.map((item, index) => (
       <div key={index}>
-        <img
+        <div
           className="collection-item"
-          src={item.images[0].url}
-          alt={item.name}
-          width={item.images[0].width}
-          height={item.images[0].height}
-        />
+          onClick={() => console.log(collection[index])}
+        >
+          <img
+            className="collection-image"
+            src={item.images[0].url}
+            alt={item.name}
+            width={item.images[0].width}
+            height={item.images[0].height}
+          />
+          <span className="material-icons md-36 collection-play">
+            play_circle
+          </span>
+        </div>
         <div className="collection-item-desc player-description">
           <a
             className="collection-item-title"
@@ -56,7 +73,12 @@ function CollectionDisplay(props) {
     ));
   }
 
-  return <div className="collection-display">{displayCollection}</div>;
+  return (
+    <div>
+      <h1 className="collection-display-title player-title">{title}</h1>
+      <div className="collection-display">{displayCollection}</div>
+    </div>
+  );
 }
 
 export default CollectionDisplay;

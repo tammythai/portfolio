@@ -14,7 +14,6 @@ function Playlist(props) {
       if (mounted) {
         setPlaylist(playlistData.playlist);
         setTracks(playlistData.tracks);
-        console.log(playlistData.playlist);
       }
     });
     return () => {

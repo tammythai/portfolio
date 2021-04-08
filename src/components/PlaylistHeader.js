@@ -13,11 +13,14 @@ function PlaylistHeader(props) {
 
   return (
     <div className="playlist-header">
-      <img
-        className="playlist-image"
-        src={images ? images[0].url : null}
-        alt={name}
-      />
+      <div className="playlist-item" onClick={() => console.log(id)}>
+        <img
+          className="playlist-image"
+          src={images ? images[0].url : null}
+          alt={name}
+        />
+        <span className="material-icons md-36 playlist-play">play_circle</span>
+      </div>
       <div className="playlist-info">
         <a
           className="playlist-title"
