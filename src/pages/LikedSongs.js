@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getLikedTracks } from "../utilities/api";
-import ListDisplay from "./ListDisplay";
+import ListDisplay from "../components/ListDisplay";
 
 function LikedSongs() {
   const [tracks, setTracks] = useState([]);

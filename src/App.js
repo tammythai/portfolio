@@ -3,16 +3,16 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
-import Home from "./components/Home";
-import Browse from "./components/Browse";
-import Radio from "./components/Radio";
+import Playlist from "./components/Playlist";
 import Player from "./components/Player";
 import Titlebar from "./components/Titlebar";
+import Home from "./pages/Home";
+import LikedSongs from "./pages/LikedSongs";
+import Browse from "./pages/Browse";
+import Radio from "./pages/Radio";
+import Artists from "./pages/Artists";
+import Albums from "./pages/Albums";
 import Draggable from "react-draggable";
-import LikedSongs from "./components/LikedSongs";
-import Artists from "./components/Artists";
-import Albums from "./components/Albums";
-import Playlist from "./components/Playlist";
 
 const navRoutes = [
   {

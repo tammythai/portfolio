@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getRecentTracks } from "../utilities/api";
-import ListDisplay from "./ListDisplay";
+import ListDisplay from "../components/ListDisplay";
 
 function Radio() {
   const [tracks, setTracks] = useState([]);
