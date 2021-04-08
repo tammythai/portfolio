@@ -4,28 +4,25 @@ import ListDisplay from "./ListDisplay";
 
 function Radio() {
   const [tracks, setTracks] = useState([]);
-  // use useEffect to setTracks to the filtered list from
-  // fetching /api/radio
-  // you can extract out the function to an api functions file
-  // have it so that useEffect is only called when tracks changes
+  // the track dependency currently depends on checking the id of the most recently played song
+  const trackDependency = tracks.length > 0 ? tracks[0].id : null;
 
   useEffect(() => {
-    // const fetchTracks = async () => {
-    //   const data = await getRecentTracks();
-    //   console.log(data);
-    //   setTracks(data);
-    // };
-    // fetchTracks();
-
+    let mounted = true;
     getRecentTracks().then((tracks) => {
-      setTracks(tracks);
+      if (mounted) {
+        setTracks(tracks);
+      }
     });
-  }, []);
+    return () => {
+      mounted = false;
+    };
+  }, [trackDependency]);
 
   return (
     <div>
-      <h1 className="page-title">Radio</h1>
-      <h2 className="page-description">
+      <h1 className="player-title">Radio</h1>
+      <h2 className="player-description">
         My 10 most recently listened to tracks
       </h2>
       <ListDisplay tracks={tracks} />

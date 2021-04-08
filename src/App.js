@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
 import Sidebar from "./components/Sidebar";
@@ -63,7 +63,7 @@ const playlistsRoutes = [
   },
   {
     path: "/playlist/top-songs-2020",
-    title: "Your Top Songs 2020",
+    title: "Your Top...",
     main: () => <Playlist playlistId="37i9dQZF1EMh8ohlGzGpOf" />,
   },
 ];
@@ -81,7 +81,7 @@ function App() {
   // const [users, setUsers] = useState([]);
   // const [hasError, setHasError] = useState(false);
 
-  const loginContext = React.createContext(false);
+  // const loginContext = React.createContext(false);
 
   // useEffect(() => {
   //   fetch("/api/greeting")
@@ -99,7 +99,7 @@ function App() {
   // can use the context API to let the other components know if you're
   // logged in or not
 
-  console.log("this be the url " + window.location.href);
+  // console.log("this be the url " + window.location.href);
 
   return (
     <Draggable nodeRef={nodeRef} handle="#handle">

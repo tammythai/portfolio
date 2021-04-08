@@ -25,10 +25,10 @@ function PlaylistHeader(props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {name}
+          <h1 className="player-title">{name}</h1>
         </a>
-        <div className="page-description">{description}</div>
-        <div className="playlist-length">
+        <div className="player-description">{description}</div>
+        <div className="playlist-length player-description">
           {song_count} songs, {formatTimeToText(msToTime(duration))}
         </div>
       </div>

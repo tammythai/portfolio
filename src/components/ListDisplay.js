@@ -11,7 +11,7 @@ function ListDisplay(props) {
 
   // make sure to have a check if it's undefined
   const displayTracks = tracks?.map((track, index) => (
-    <div className="list-display-track" key={index}>
+    <div className="list-display-track player-content" key={index}>
       <a
         href={"https://open.spotify.com/track/" + track.id}
         target="_blank"
@@ -36,7 +36,7 @@ function ListDisplay(props) {
   ));
 
   const listDisplayHeader = (
-    <div className="list-display-track list-header">
+    <div className="list-display-track caps-heading">
       <span className="track-title">Title</span>
       <span className="track-artist">Artist</span>
       <span className="track-album">Album</span>

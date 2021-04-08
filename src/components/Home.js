@@ -4,7 +4,7 @@ import picture from "../images/profile_picture.jpeg";
 function Home() {
   return (
     <div className="home">
-      <h4>Artist</h4>
+      <h4 className="caps-heading">Artist</h4>
       <img src={picture} alt="Face of Tammy Thai" />
       <span className="name">
         <h1>Tammy</h1>

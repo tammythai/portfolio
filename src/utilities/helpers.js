@@ -37,7 +37,7 @@ export const formatTimeToClock = (time) => {
 export const formatTimeToText = (time) => {
   let { hours, minutes, seconds } = time;
   if (hours > 0) {
-    if (minutes != 0) {
+    if (minutes !== 0) {
       return `${hours} hr ${minutes} min`;
     } else {
       return `${hours} hr`;

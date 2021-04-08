@@ -19,8 +19,8 @@ function LikedSongs() {
 
   return (
     <div>
-      <h1 className="page-title">Liked Songs</h1>
-      <h2 className="page-description">My 10 most recently liked tracks</h2>
+      <h1 className="player-title">Liked Songs</h1>
+      <h2 className="player-description">My 10 most recently liked tracks</h2>
       <ListDisplay tracks={tracks} />
     </div>
   );

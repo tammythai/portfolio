@@ -1,3 +1,5 @@
+// Theme CSS
+
 $light-color: #d0dcf4;
 $main-color: #b6cae9;
 $medium-color: #98a5c7;
@@ -8,43 +10,26 @@ $font-color: white;
 $sidebar-fontsize: 16px;
 $caps-fontsize: 14px;
 
+$page-title-fontsize: 26px;
 $page-header-fontsize: 16px;
 $page-content-fontsize: 14px;
 
-$playlist-header-fontsize: 14px;
-$playlist-content-fontsize: 12px;
+$player-title: 24px;
+$player-header: 14px;
+$player-content: 12px;
 
-.playlist-header {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 10px;
-  .playlist-image {
-    width: 150px;
-    height: 150px;
-  }
-  .playlist-info {
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    .playlist-title {
-      font-size: 24px;
-      margin: 25px 0px 0px 0px;
-    }
-    .playlist-length {
-      margin-top: 10px;
-    }
-  }
-}
-
-.page-title {
-  font-size: 24px;
+.player-title {
+  font-size: $player-title;
   margin: 0px;
 }
 
-.page-description {
-  font-size: 16px;
+.player-description {
+  font-size: $player-header;
   font-weight: 400;
+}
+
+.player-content {
+  font-size: $player-content;
 }
 
 .caps-heading {
@@ -70,6 +55,8 @@ body {
     margin: 0px;
   }
 }
+
+// React CSS
 
 .app-container {
   max-width: 800px;
@@ -117,6 +104,7 @@ body {
   }
   .sidebar-element {
     position: relative;
+    width: 150px;
     left: 30px;
     top: 30px;
     margin-bottom: 50px;
@@ -129,7 +117,6 @@ body {
     h3 {
       position: relative;
       top: 10px;
-      @extend %caps-font;
     }
   }
 }
@@ -172,7 +159,6 @@ body {
   }
   h4 {
     margin-top: 5px;
-    @extend %caps-font;
   }
   p {
     font-size: $page-content-fontsize;
@@ -188,7 +174,7 @@ body {
     flex-direction: row;
     padding-bottom: 20px;
     justify-content: space-between;
-    font-size: $playlist-content-fontsize;
+
     .track-title {
       width: 100px;
     }
@@ -205,8 +191,24 @@ body {
       width: 29px;
     }
   }
-  .list-header {
-    @extend %caps-font;
+}
+
+.playlist-header {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 10px;
+  .playlist-image {
+    width: 150px;
+    height: 150px;
+  }
+  .playlist-info {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .playlist-length {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -257,10 +259,4 @@ body {
 }
 .material-icons.md-48 {
   font-size: 48px;
-}
-
-%caps-font {
-  text-transform: uppercase;
-  font-size: $caps-fontsize;
-  font-weight: lighter;
 }

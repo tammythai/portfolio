@@ -9,11 +9,11 @@ function Albums() {
     getTopAlbums().then((albums) => {
       setAlbums(albums);
     });
-  }, []);
+  }, [JSON.stringify(albums)]);
 
   return (
     <div>
-      <h1>Albums</h1>
+      <h1 className="player-title">Albums</h1>
       <CollectionDisplay collection={albums} collectionType="albums" />
     </div>
   );
