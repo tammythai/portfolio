@@ -52,8 +52,6 @@ body {
   }
 
   ul {
-    list-style-type: none;
-    margin: 0px;
   }
 }
 
@@ -98,6 +96,8 @@ body {
   background-color: $light-color;
   ul {
     line-height: 160%;
+    list-style-type: none;
+    margin: 0px;
   }
   .top-sidebar {
     width: 180px;
@@ -169,6 +169,19 @@ body {
   }
   a {
     display: block;
+  }
+}
+
+.paciolan,
+.healthwise {
+  h1 {
+    font-size: $page-title-fontsize;
+  }
+  p {
+    font-size: $page-content-fontsize;
+  }
+  li {
+    padding-bottom: 10px;
   }
 }
 

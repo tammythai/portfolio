@@ -12,8 +12,10 @@ function Home() {
       </span>
       <h2>Bio</h2>
       <p>
-        Always learning front-end developer with a focus on React. Striving to
-        make applications that are aesthetic, accessible, and authentic.
+        Still learning front-end developer with a focus on React. Striving to
+        make applications that are aesthetic, accessible, and authentic. This
+        portfolio was made with inspiration from Spotify and a retro Windows
+        explorer vibe.
       </p>
 
       <h2>More</h2>
