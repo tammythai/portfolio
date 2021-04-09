@@ -12,23 +12,40 @@ function Home() {
       </span>
       <h2>Bio</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum
-        erat in volutpat pellentesque. Duis suscipit, tellus eget egestas
-        gravida.
+        Always learning front-end developer with a focus on React. Striving to
+        make applications that are aesthetic, accessible, and authentic.
       </p>
 
       <h2>More</h2>
       <p>
-        Nunc feugiat ultrices aliquam. Sed sed porta ante. Vestibulum purus
-        urna, ultrices at ipsum ut, feugiat aliquam quam. Sed quis aliquam est.
+        Graduate from University of California, Irvine who enjoys morning
+        exercise, playing guitar, singing badly to her favorite songs, watching
+        others play games, and gaining a better understanding of physical/mental
+        health.
       </p>
 
       <h2>Info</h2>
-      <ul>
-        <li>LinkedIn</li>
-        <li>GitHub</li>
-        <li>Resume</li>
-      </ul>
+      <a
+        href="https://www.linkedin.com/in/tammy-thai98/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="https://github.com/tammythai"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+      <a
+        href="https://drive.google.com/file/d/1VvHS9S4P7XK35O-_-URPPhL1SGtUgqm8/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Resume
+      </a>
     </div>
   );
 }

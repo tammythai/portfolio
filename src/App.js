@@ -12,7 +12,31 @@ import Browse from "./pages/Browse";
 import Radio from "./pages/Radio";
 import Artists from "./pages/Artists";
 import Albums from "./pages/Albums";
+import Healthwise from "./projects/Healthwise";
+import Paciolan from "./projects/Paciolan";
 import Draggable from "react-draggable";
+
+import paciolan from "./images/paciolan.png";
+import healthwise from "./images/healthwise.png";
+
+const projectRoutes = [
+  {
+    title: "Paciolan - Inventory in Distress",
+    description:
+      "React/Node.js project creating a sign-up portal for increasing ticket sales tailored to customers",
+    image: paciolan,
+    path: "/paciolan",
+    main: () => <Paciolan />,
+  },
+  {
+    title: "Healthwise - Mobile App/Admin Dashboard",
+    description:
+      "Angular project involving IoT and healthcare which focused on user provided data to generate better health solutions",
+    image: healthwise,
+    path: "/healthwise",
+    main: () => <Healthwise />,
+  },
+];
 
 const navRoutes = [
   {
@@ -23,7 +47,7 @@ const navRoutes = [
   {
     path: "/browse",
     title: "Browse",
-    main: () => <Browse />,
+    main: () => <Browse projects={projectRoutes} />,
   },
   {
     path: "/radio",
@@ -73,7 +97,7 @@ const playlistsRoutes = [
 // it doesn't die
 // also need to have a fallback if im not logged in (aka no token available)
 
-const routesList = [navRoutes, libraryRoutes, playlistsRoutes];
+const routesList = [navRoutes, libraryRoutes, playlistsRoutes, projectRoutes];
 
 function App() {
   const nodeRef = React.useRef(null);

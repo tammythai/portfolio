@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CollectionDisplay(props) {
   const title = props.title;
@@ -17,8 +18,6 @@ function CollectionDisplay(props) {
             className="collection-image"
             src={item.album.images[0].url}
             alt={item.album.name}
-            width={item.album.images[0].width}
-            height={item.album.images[0].height}
           />
           <span className="material-icons md-36 collection-play">
             play_circle
@@ -52,8 +51,6 @@ function CollectionDisplay(props) {
             className="collection-image"
             src={item.images[0].url}
             alt={item.name}
-            width={item.images[0].width}
-            height={item.images[0].height}
           />
           <span className="material-icons md-36 collection-play">
             play_circle
@@ -68,6 +65,30 @@ function CollectionDisplay(props) {
           >
             {item.name}
           </a>
+        </div>
+      </div>
+    ));
+  } else if (collectionType === "projects") {
+    displayCollection = collection.map((item, index) => (
+      <div key={index}>
+        <Link to={item.path}>
+          <div
+            className="collection-item"
+            onClick={() => console.log(collection[index])}
+          >
+            <img
+              className="collection-image"
+              src={item.image}
+              alt={item.title}
+            />
+            <span className="material-icons md-36 collection-play">
+              play_circle
+            </span>
+          </div>
+        </Link>
+        <div className="collection-item-desc player-description">
+          <div className="collection-item-title">{item.title}</div>
+          <div>{item.description}</div>
         </div>
       </div>
     ));
