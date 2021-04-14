@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CurrentSongContext } from "../components/CurrentSongProvider";
 import {
   msToTime,
   datetimeToDate,
@@ -8,13 +9,18 @@ import {
 
 function ListDisplay(props) {
   const tracks = props.tracks;
+  const { setCurrentSong } = useContext(CurrentSongContext);
+
+  const handleClick = (track) => {
+    setCurrentSong(track);
+  };
 
   // make sure to have a check if it's undefined
   const displayTracks = tracks?.map((track, index) => (
     <div
       className="list-display-track player-content"
       key={index}
-      onClick={() => console.log(tracks[index])}
+      onClick={() => handleClick(tracks[index])}
     >
       <span className="material-icons list-display-play">
         play_circle_outline

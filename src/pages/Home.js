@@ -12,18 +12,16 @@ function Home() {
       </span>
       <h2>Bio</h2>
       <p>
-        Still learning front-end developer with a focus on React. Striving to
-        make applications that are aesthetic, accessible, and authentic. This
-        portfolio was made with inspiration from Spotify and a retro Windows
-        explorer vibe.
+        Front-end developer learning React. Striving to make applications that
+        are aesthetic, accessible, and authentic. This portfolio was made with
+        inspiration from Spotify and Windows explorer.
       </p>
 
       <h2>More</h2>
       <p>
         Graduate from University of California, Irvine who enjoys morning
-        exercise, playing guitar, singing badly to her favorite songs, watching
-        others play games, and gaining a better understanding of physical/mental
-        health.
+        exercise, playing guitar, making monthly playlists, watching her friends
+        game, and gaining more self-awareness.
       </p>
 
       <h2>Info</h2>

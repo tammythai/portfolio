@@ -8,8 +8,8 @@ function Healthwise() {
     <div className="healthwise">
       <h1>Healthwise - Mobile App/Admin Dashboard</h1>
       <p>
-        Summary: A capstone group project where we worked on an existing mobile
-        application/web admin portal that incorporated IoT healthcare by
+        Summary: A capstone group project where we worked on an existing Angular
+        mobile application/web admin portal that incorporated IoT healthcare by
         gathering data from patients and managing surveys and viewing that data
         through the dashboard
       </p>

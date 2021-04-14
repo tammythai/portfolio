@@ -50,9 +50,6 @@ body {
   a:hover {
     text-decoration: underline;
   }
-
-  ul {
-  }
 }
 
 // React CSS
@@ -161,6 +158,7 @@ body {
   h4 {
     margin-top: 5px;
   }
+  a,
   p {
     font-size: $page-content-fontsize;
   }
@@ -298,9 +296,59 @@ body {
   background-color: $medium-color;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 10px;
+  gap: 110px;
+  .player-description {
+    display: grid;
+    width: 210px;
+    grid-template-columns: 45px 120px 24px;
+    grid-template-areas:
+      "song-cover song-title song-fav"
+      "song-cover song-artist .";
+    column-gap: 10px;
+    .player-image {
+      grid-area: song-cover;
+      width: 45px;
+      height: 45px;
+    }
+    .player-song {
+      grid-area: song-title;
+    }
+    .player-artist {
+      grid-area: song-artist;
+    }
+    .player-favorite {
+      grid-area: song-fav;
+      font-size: 14px;
+      padding-top: 2px;
+    }
+  }
+  .player-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    right: 20px;
+  }
+  .player-volume-controls {
+    .player-volume {
+      position: relative;
+      bottom: 5px;
+      right: 15px;
+    }
+    .player-slider {
+      width: 80px;
+      color: white;
+    }
+  }
+}
+
+.scroll-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 ::-webkit-scrollbar {
@@ -313,15 +361,23 @@ body {
   outline: 1px solid $medium-color;
 }
 
-.material-icons.md-18 {
+.material-icons.md-14,
+.material-icons-outlined.md-14 {
+  font-size: 14px;
+}
+.material-icons.md-18,
+.material-icons-outlined.md-18 {
   font-size: 18px;
 }
-.material-icons.md-24 {
+.material-icons.md-24,
+.material-icons-outlined.md-24 {
   font-size: 24px;
 }
-.material-icons.md-36 {
+.material-icons.md-36,
+.material-icons-outlined.md-36 {
   font-size: 36px;
 }
-.material-icons.md-48 {
+.material-icons.md-48,
+.material-icons-outlined.md-48 {
   font-size: 48px;
 }
