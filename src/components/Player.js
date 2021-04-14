@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { CurrentSongContext } from "../components/CurrentSongProvider";
+import { CurrentSongContext } from "../contexts/CurrentSongProvider";
 import FullTextOnHover from "../components/FullTextOnHover";
 import { displayArtists } from "../utilities/helpers";
 import Slider from "@material-ui/core/Slider";
@@ -48,11 +48,21 @@ function Player() {
         <div className="player-description"></div>
       )}
       <div className="player-controls">
-        <span className="material-icons md-18">shuffle</span>
-        <span className="material-icons md-24">skip_previous</span>
-        <span className="material-icons md-36">pause_circle_outline</span>
-        <span className="material-icons md-24">skip_next</span>
-        <span className="material-icons md-18">repeat</span>
+        <span className="material-icons md-18 player-controls-icons">
+          shuffle
+        </span>
+        <span className="material-icons md-24 player-controls-icons">
+          skip_previous
+        </span>
+        <span className="material-icons md-36 player-controls-icons">
+          pause_circle_outline
+        </span>
+        <span className="material-icons md-24 player-controls-icons">
+          skip_next
+        </span>
+        <span className="material-icons md-18 player-controls-icons">
+          repeat
+        </span>
       </div>
       <div className="player-volume-controls">
         <span className="material-icons-outlined md-18 player-volume">

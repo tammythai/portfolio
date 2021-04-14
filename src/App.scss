@@ -8,6 +8,10 @@ $dark-color: #727d9a;
 $font-name: "IBM Plex Mono", sans-serif;
 $font-color: white;
 
+$toolbar-border-color: #b0b0b0;
+$toolbar-color: #9f9f9f;
+$desktop-color: #d5d5d5;
+
 $sidebar-fontsize: 16px;
 $caps-fontsize: 14px;
 
@@ -42,7 +46,13 @@ $player-content: 12px;
 body {
   font-family: $font-name;
   color: $font-color;
-  background-color: pink;
+  background-color: $desktop-color;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
   a {
     color: $font-color;
     text-decoration: none;
@@ -69,6 +79,53 @@ body {
   }
 }
 
+.bg {
+  width: 100%;
+  height: 100%;
+  .bg-desktop {
+    background-color: $desktop-color;
+    height: calc(100vh - 35px);
+  }
+  .bg-toolbar {
+    background-color: $toolbar-color;
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: row;
+    .bg-toolbar-block-inset {
+      @extend %bg-toolbar-block;
+      border-style: inset;
+    }
+    .bg-toolbar-block-outset {
+      @extend %bg-toolbar-block;
+      border-style: outset;
+    }
+  }
+}
+
+%bg-toolbar-block {
+  border-color: $toolbar-border-color;
+  white-space: nowrap;
+  width: auto;
+  padding: 0 10px 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  height: 80%;
+}
+
+.desktop-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
 .titlebar-left {
   grid-area: tbar-left;
   background-color: $light-color;
@@ -86,6 +143,10 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  .window-minimize:hover,
+  .window-close:hover {
+    opacity: 0.3;
+  }
 }
 
 .sidebar {
@@ -237,12 +298,12 @@ body {
       height: 150px;
     }
   }
-  .playlist-item:hover .playlist-play {
-    display: block;
-  }
-  .playlist-item:hover {
-    opacity: 0.6;
-  }
+  // .playlist-item:hover .playlist-play {
+  //   display: block;
+  // }
+  // .playlist-item:hover {
+  //   opacity: 0.6;
+  // }
   .playlist-info {
     margin-left: 10px;
     display: flex;
@@ -273,12 +334,12 @@ body {
       height: 150px;
     }
   }
-  .collection-item:hover {
-    opacity: 0.6;
-  }
-  .collection-item:hover .collection-play {
-    display: block;
-  }
+  // .collection-item:hover {
+  //   opacity: 0.6;
+  // }
+  // .collection-item:hover .collection-play {
+  //   display: block;
+  // }
   .collection-item-desc {
     display: flex;
     flex-direction: column;
@@ -331,6 +392,9 @@ body {
     gap: 10px;
     position: relative;
     right: 20px;
+    .player-controls-icons:hover {
+      opacity: 0.3;
+    }
   }
   .player-volume-controls {
     .player-volume {

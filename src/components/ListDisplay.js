@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CurrentSongContext } from "../components/CurrentSongProvider";
+import { CurrentSongContext } from "../contexts/CurrentSongProvider";
 import {
   msToTime,
   datetimeToDate,
