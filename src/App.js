@@ -6,41 +6,17 @@ import Main from "./components/Main";
 import Player from "./components/Player";
 import Titlebar from "./components/Titlebar";
 import Background from "./components/Background";
+import Login from "./pages/Login";
 import { CurrentSongProvider } from "./contexts/CurrentSongProvider";
 import Draggable from "react-draggable";
 import { routesList } from "./routes";
 
-// need to reach login endpoint to auto login
-// have something to track if im logged in so when you make calls to the api
-// it doesn't die
-// also need to have a fallback if im not logged in (aka no token available)
-
 function App() {
   const nodeRef = React.useRef(null);
+  const code = new URLSearchParams(window.location.search).get("code") || null;
 
-  // const [users, setUsers] = useState([]);
-  // const [hasError, setHasError] = useState(false);
-
-  // useEffect(() => {
-  //   fetch("/api/greeting")
-  //     .then((res) => res.json())
-  //     .then((users) => {
-  //       setUsers(users);
-  //       console.log("hello", users);
-  //     })
-  //     .catch((err) => {
-  //       setHasError(true);
-  //       console.log(err);
-  //     });
-  // }, []);
-
-  // can use the context API to let the other components know if you're
-  // logged in or not
-
-  // console.log("this be the url " + window.location.href);
-
-  return (
-    <Background>
+  return code === "200" ? (
+    <Background portfolio={true}>
       <Draggable
         nodeRef={nodeRef}
         handle="#handle"
@@ -59,6 +35,10 @@ function App() {
           </CurrentSongProvider>
         </div>
       </Draggable>
+    </Background>
+  ) : (
+    <Background portfolio={false}>
+      <Login code={code} />
     </Background>
   );
 }

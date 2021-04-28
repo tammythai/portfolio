@@ -2,6 +2,8 @@ import React from "react";
 import DesktopIcon from "./DesktopIcon";
 
 function Background(props) {
+  const portfolio = props.portfolio;
+
   return (
     <div className="bg">
       <div className="bg-desktop">
@@ -12,7 +14,9 @@ function Background(props) {
       </div>
       <div className="bg-toolbar">
         <div className="bg-toolbar-block-outset">Start</div>
-        <div className="bg-toolbar-block-inset">Portfolio</div>
+        {portfolio ? (
+          <div className="bg-toolbar-block-inset">Portfolio</div>
+        ) : null}
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 {
-  "homepage": "http://tammythai.github.io/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -10,27 +9,23 @@
     "@testing-library/user-event": "^7.2.1",
     "cors": "^2.8.5",
     "node-sass": "^4.14.1",
-    "querystring": "^0.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-draggable": "^4.4.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
+    "react-scripts": "^4.0.3",
     "spotify-web-api-node": "^5.0.2",
     "typescript": "^4.1.5"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodenv . --exec nodemon | pino-colada",
+    "server": "nodenv server --exec nodemon | pino-colada",
     "dev": "run-p server start"
   },
   "proxy": "http://localhost:3001",
-  "main": "./server/app.js",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -50,7 +45,6 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "express-pino-logger": "^6.0.0",
-    "gh-pages": "^3.1.0",
     "node-env-run": "^4.0.2",
     "nodemon": "^2.0.7",
     "npm-run-all": "^4.1.5",

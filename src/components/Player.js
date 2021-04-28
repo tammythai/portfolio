@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CurrentSongContext } from "../contexts/CurrentSongProvider";
-import FullTextOnHover from "../components/FullTextOnHover";
+import EllipsisText from "./EllipsisText";
 import { displayArtists } from "../utilities/helpers";
 import Slider from "@material-ui/core/Slider";
 
@@ -19,7 +19,7 @@ function Player() {
         src={currentSong?.album.images[0].url}
         alt=""
       />
-      <FullTextOnHover>
+      <EllipsisText>
         <a
           className="player-song"
           href={"http://open.spotify.com/track/" + currentSong?.id}
@@ -28,12 +28,12 @@ function Player() {
         >
           {currentSong?.title}
         </a>
-      </FullTextOnHover>
-      <FullTextOnHover>
+      </EllipsisText>
+      <EllipsisText>
         <span className="player-artist">
           {currentSong?.artists ? displayArtists(currentSong.artists) : null}
         </span>
-      </FullTextOnHover>
+      </EllipsisText>
       <span className="material-icons-outlined player-favorite">
         favorite_border
       </span>

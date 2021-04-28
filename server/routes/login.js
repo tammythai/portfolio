@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const spotifyApi = require("../app");
+const spotifyApi = require("..");
 const scopes = [
   "user-read-recently-played",
   "user-library-read",

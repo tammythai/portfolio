@@ -11,6 +11,7 @@ $font-color: white;
 $toolbar-border-color: #b0b0b0;
 $toolbar-color: #9f9f9f;
 $desktop-color: #d5d5d5;
+$app-window-color: #bdbdbd;
 
 $sidebar-fontsize: 16px;
 $caps-fontsize: 14px;
@@ -76,6 +77,23 @@ body {
       "tbar-left tbar-right win-acts"
       "sbar mbar mbar"
       "play play play";
+  }
+}
+
+.login {
+  border-color: $toolbar-border-color;
+  background-color: $app-window-color;
+  border-style: inset;
+  white-space: nowrap;
+  width: auto;
+  padding: 30px;
+  position: absolute;
+  left: calc(100% / 2.5);
+  .login-buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    gap: 15px;
   }
 }
 
