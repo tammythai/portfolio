@@ -4,6 +4,7 @@ const pino = require("express-pino-logger")();
 const SpotifyWebApi = require("spotify-web-api-node");
 
 const { CLIENT_ID, CLIENT_SECRET, REDIRECT_URI } = process.env;
+const PORT = process.env.PORT || 3001;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: CLIENT_ID,
@@ -23,7 +24,8 @@ const playlistsRouter = require("./routes/playlists");
 
 const app = express();
 app
-  .use(express.static(__dirname + "/public"))
+  // .use(express.static(__dirname + "/public"))
+  .use(express.static(__dirname + "../build"))
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use(cors())
@@ -38,6 +40,10 @@ app
   .use("/api/artists", artistsRouter)
   .use("/api/playlists", playlistsRouter);
 
-app.listen(3001, () => {
+app.get("*", (req, res) => {
+  res.sendFile(express.static(__dirname, "../build", "index.html"));
+});
+
+app.listen(PORT, () => {
   console.log("Express server is running on localhost:3001");
 });
